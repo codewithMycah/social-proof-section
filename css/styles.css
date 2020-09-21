@@ -1,0 +1,220 @@
+:root{
+  --VeryDarkMagenta: hsl(300, 43%, 22%);
+  --SoftPink: hsl(333, 80%, 67%);
+  --DarkGrayishMagenta: hsl(303, 10%, 53%);
+  --LightGrayishMagenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+
+  --font: 'Spartan', sans-serif;
+  --font-reg: 400;
+  --font-med: 500;
+  --font-bold: 700;
+
+  --font-h1: 3rem;
+  --font-big: 1.5rem;
+  --font-normal: .9rem;
+  --font-small: .8rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root{
+    --font-h1: 3.5rem;
+    --font-big: 1.8rem;
+    --font-normal: 1rem;
+    --font-small: .8rem;
+  }
+}
+
+
+body{
+  background-color: var(--White);
+  color: var(--VeryDarkMagenta);
+  font-family: var(--font);
+  font-size: var(--font-normal);
+  font-weight: var(--font-reg);
+  min-height: 70vh;
+  padding: 2.5rem 1.5rem;
+  /* text-align: center; */
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top {
+  margin-bottom: 30px;
+}
+
+.top > .heading {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top > .heading > .header-title {
+  color: var(--VeryDarkMagenta);
+  font-size: var(--font-h1);
+  margin-bottom: 0;
+}
+
+.top > .heading > .header-p {
+  color: var(--DarkGrayishMagenta);
+  line-height: 1.5;
+}
+
+.top > .group-rating > .rating {
+  background-color: var(--LightGrayishMagenta);
+  border-radius: 1rem;
+  padding: .5rem 0;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.top > .group-rating > .rating > img{
+  margin-top: .5rem;
+}
+
+.top > .group-rating > .rating > p {
+  font-weight: var(--font-bold);
+  font-size: var(--font-small);
+}
+
+.card-group > .card {
+  background-color: var(--VeryDarkMagenta);
+  color: var(--White);
+  max-width: 440px;
+  margin-bottom: 1rem;
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-group > .card > .profile {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 0 0 1rem;
+}
+
+.card-group > .card > .profile > .profile-img {
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.card-group > .card > .profile > .profile-details {
+  margin-left: 1.5rem;
+}
+
+.card-group > .card > .profile > .profile-details > p {
+  margin: 0;
+  color: var(--SoftPink);
+}
+
+.card-group > .card > .profile > .profile-details > .profile-name {
+  font-weight: var(--font-reg);
+  color: var(--White);
+}
+
+.card-group > .card > .profile > .profile-details > .profile-desc {
+  font-weight: var(--font-reg);
+  font-size: var(--font-small);
+}
+
+.card-group > .card > .quote {
+  width: 90%;
+  opacity: 0.8;
+  font-size: var(--font-small);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1440px) {
+  .top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    padding: 0rem 2rem;
+    max-width: 1440px;
+  }
+
+  .top > .heading, .top > .group-rating {
+    text-align: left;
+    margin-bottom: initial;
+    align-self: center;
+  }
+
+  .top > .group-rating > .rating {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .top > .group-rating > .rating {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    /* justify-content: flex-start; */
+    align-items: center;
+  }
+
+  .top > .group-rating > .rating:nth-child(1){
+    /* align-self: flex-start; */
+    max-width: 400px;
+    margin-left: 50px;
+  }
+  .top > .group-rating > .rating:nth-child(2){
+    /* align-self: center; */
+    max-width: 400px;
+    margin-left: 90px;
+  }
+  .top > .group-rating > .rating:nth-child(3){
+    /* align-self: flex-end; */
+    max-width: 400px;
+    margin-left: 130px;
+  }
+
+  .top > .group-rating > .rating > img{
+    margin-top: 0;
+  }
+
+  .top > .group-rating > .rating p{
+    margin-left: 2rem;
+  }
+
+  .card-group {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 9rem;
+  }
+
+  .card-group > .card {
+    margin-bottom: initial;
+    margin-left: initial;
+    margin-right: initial;
+    max-width: 340px;
+  }
+
+  .card-group > .card:nth-child(1){
+    align-self: flex-start;
+  }
+
+  .card-group > .card:nth-child(2){
+    align-self: center;
+    margin-top: 10px;
+  }
+
+  .card-group > .card:nth-child(3){
+    align-self: flex-end;
+    margin-top: 40px;
+  }
+}
